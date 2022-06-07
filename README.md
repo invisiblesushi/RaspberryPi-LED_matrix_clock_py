@@ -1,12 +1,14 @@
 # RPI-led-matrix-clock-py
 
 # Setup Python 3
+```shell
 git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
 cd /bindings/python/
 sudo make build-python PYTHON=$(which python3)
 sudo make install-python PYTHON=$(which python3)
 
 Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbmatrix
+```
 
 # Requirement
 Pillow or PIL
