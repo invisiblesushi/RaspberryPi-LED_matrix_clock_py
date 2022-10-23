@@ -8,6 +8,8 @@ sudo make build-python PYTHON=$(which python3)
 sudo make install-python PYTHON=$(which python3)
 
 Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbmatrix
+
+
 ```
 
 # Requirement
