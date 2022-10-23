@@ -17,10 +17,8 @@ config.read('appsettings.ini')
 def main():
 	matrix = matrix_init()
 
-
-
 	while(True):
-		weather_clock(matrix)
+		sakura_clock(matrix)
 		time.sleep(60)
 
 def matrix_init():

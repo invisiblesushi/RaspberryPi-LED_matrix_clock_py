@@ -13,7 +13,13 @@ Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbma
 ```
 
 # Requirement
-Pillow or PIL
+- PIL
+- pyowm
+
+# Part list
+- Raspberry pi zero W
+- HCW-P715 Buck Converter
+- P3 RGB 64x32 dot panel
 
 |LED matrix pin| Pin | Pin |LED matrix pin
 |-------------:|:---:|:---:|:-----------
@@ -37,3 +43,7 @@ Pillow or PIL
 |         -    |  35 |  36 | -
 |         -    |  37 |  38 | -
 |         -    |  39 |  40 | -
+
+# Source
+- sakura.png https://github.com/allenslab/matrix-dashboard/blob/master/impl/apps_v2/res/main_screen/sakura-bg.png
+- tiny.otf https://github.com/allenslab/matrix-dashboard/blob/master/impl/fonts/tiny.otf

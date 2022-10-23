@@ -1,1 +1,0 @@
-https://github.com/allenslab/matrix-dashboard/blob/master/impl/fonts/tiny.otf
