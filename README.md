@@ -1,4 +1,7 @@
 # RPI-led-matrix-clock-py
+<img src="/Image/Sakura_clock.png" width="500" />
+<img src="/Image/Weather.png" width="500" />
+<img src="/Image/Back.png" width="500" />
 
 # Setup Python 3
 ```shell
@@ -8,8 +11,6 @@ sudo make build-python PYTHON=$(which python3)
 sudo make install-python PYTHON=$(which python3)
 
 Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbmatrix
-
-
 ```
 
 # Requirement
@@ -21,6 +22,7 @@ Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbma
 - HCW-P715 Buck Converter
 - P3 RGB 64x32 dot panel
 
+# GPIO conncetion
 |LED matrix pin| Pin | Pin |LED matrix pin
 |-------------:|:---:|:---:|:-----------
 |         -    |   1 |   2 | -
