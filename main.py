@@ -7,8 +7,8 @@ import time
 
 #Globals
 textColor = (255, 255, 255)
-currentTime = datetime.now().strftime("%H:%M")
-currentDate = datetime.now().strftime("%d-%m")
+#currentTime = datetime.now().strftime("%H:%M")
+#currentDate = datetime.now().strftime("%d-%m")
 image = Image.open("res/black.png").convert("RGB")
 image.thumbnail((64, 32), Image.Resampling.LANCZOS)
 config = ConfigParser()
@@ -18,8 +18,9 @@ def main():
 	matrix = matrix_init()
 
 	while(True):
-		sakura_clock(matrix)
-		time.sleep(60)
+		time = datetime.now()
+		sakura_clock(matrix, time)
+
 
 def matrix_init():
 	options = RGBMatrixOptions()
@@ -31,12 +32,12 @@ def matrix_init():
 	options.brightness = 100
 	return RGBMatrix(options = options)
 
-def sakura_clock(matrix):
+def sakura_clock(matrix, time):
 	font = ImageFont.truetype(font='fonts/tiny.otf', size=10)
 	image = Image.open("res/sakura.png").convert("RGB")
 	frame = image.copy()
 	draw = ImageDraw.Draw(frame)
-	draw.text((1, 1), currentTime, textColor, font)
+	draw.text((1, 1), time.strftime("%H:%M"), textColor, font)
 	matrix.SetImage(frame)
 
 def fuji_clock(matrix):
@@ -126,9 +127,6 @@ def get_weather_icon(icon_name):
 		return "res/13d.png"
 	if icon_name == '50d' or '50n':
 		return "res/50d.png"
-
-
-
 
 # Main function
 if __name__== "__main__" :
