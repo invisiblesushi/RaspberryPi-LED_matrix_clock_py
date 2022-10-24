@@ -21,30 +21,31 @@ Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbma
 - Raspberry pi zero W
 - HCW-P715 Buck Converter
 - P3 RGB 64x32 dot panel
+- Five Direction Navigation Button Module
 
 # GPIO conncetion
-|LED matrix pin| Pin | Pin |LED matrix pin
-|-------------:|:---:|:---:|:-----------
-|         -    |   1 |   2 | -
-|         -    |   3 |   4 | -
-|         -    |   5 |   6 | **GND**
-|**strobe**    |   7 |   8 |
-|         -    |   9 |  10 |    
-|**clock**     |  11 |  12 | **OE-**  
-|       **G1** |  13 |  14 | -
-|        **A** |  15 |  16 | **B**    
-|         -    |  17 |  18 | **C**    
-|       **B2** |  19 |  20 | -
-|       **G2** |  21 |  22 | **D**    
-|       **R1** |  23 |  24 | **R2**
-|         -    |  25 |  26 | **B1**
-|         -    |  27 |  28 | -
-|         -    |  29 |  30 | -
-|         -    |  31 |  32 | -
-|         -    |  33 |  34 | -
-|         -    |  35 |  36 | -
-|         -    |  37 |  38 | -
-|         -    |  39 |  40 | -
+|     LED matrix pin | Pin | Pin |LED matrix pin
+|-------------------:|:---:|:---:|:-----------
+| btn_com + [resistor] |   1 |   2 | -
+|                  - |   3 |   4 | -
+|                  - |   5 |   6 | **GND**
+|         **strobe** |   7 |   8 |  btn_down [screen - 1]
+|                  - |   9 |  10 |  btn_up   [screen + 1]
+|          **clock** |  11 |  12 | **OE-**  
+|             **G1** |  13 |  14 | -
+|              **A** |  15 |  16 | **B**    
+|                  - |  17 |  18 | **C**    
+|             **B2** |  19 |  20 | -
+|             **G2** |  21 |  22 | **D**    
+|             **R1** |  23 |  24 | **R2**
+|                  - |  25 |  26 | **B1**
+|                  - |  27 |  28 | -
+|                  - |  29 |  30 | -
+|                  - |  31 |  32 | btn_right  [brightness - 1]
+|                  - |  33 |  34 | btn_left   [brightness + 1]
+|                  - |  35 |  36 | -
+|                  - |  37 |  38 | -
+|                  - |  39 |  40 | -
 
 # Source
 - sakura.png https://github.com/allenslab/matrix-dashboard/blob/master/impl/apps_v2/res/main_screen/sakura-bg.png
