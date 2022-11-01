@@ -8,8 +8,6 @@ import time
 
 #Globals
 textColor = (255, 255, 255)
-#currentTime = datetime.now().strftime("%H:%M")
-#currentDate = datetime.now().strftime("%d-%m")
 image = Image.open("res/black.png").convert("RGB")
 image.thumbnail((64, 32), Image.Resampling.LANCZOS)
 config = ConfigParser()
@@ -64,10 +62,7 @@ def main():
 	matrix = matrix_init(brightness)
 
 	GPIO.cleanup
-	GPIO.cleanup
-	GPIO.cleanup
-	GPIO.cleanup
-	GPIO.cleanup
+	time.sleep(1)
 	print('GPIO.cleanup')
 
 	GPIO.setmode(GPIO.BOARD)
