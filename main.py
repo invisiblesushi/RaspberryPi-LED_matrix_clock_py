@@ -5,27 +5,31 @@ from configparser import ConfigParser
 from pyowm.owm import OWM
 import RPi.GPIO as GPIO
 import time
+import os
 
 #Globals
 textColor = (255, 255, 255)
 textColor_blue = (0, 0, 255)
 textColor_red = (255, 0, 0)
 
+matrix = None
+weather = None
+last_weather_time = datetime.min
+
 image = Image.open("res/black.png").convert("RGB")
 image.thumbnail((64, 32), Image.Resampling.LANCZOS)
 config = ConfigParser()
 config.read('appsettings.ini')
 
+#GPIO pin config
 screen_id = 0
 screen_max = 3
 btn_up = 10
 btn_down = 8
 btn_right = 32
 btn_left = 33
+btn_rst = 31
 brightness = 100
-matrix = None
-weather = None
-last_weather_time = datetime.min
 
 def main():
 	global matrix
@@ -84,13 +88,14 @@ def gpio_init():
 	GPIO.setup(btn_down, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 	GPIO.setup(btn_right, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 	GPIO.setup(btn_left, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+	GPIO.setup(btn_rst, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
 
 	# Set button event detection
 	GPIO.add_event_detect(btn_up, GPIO.RISING, callback=on_pushup, bouncetime=200)
 	GPIO.add_event_detect(btn_down, GPIO.RISING, callback=on_pushdown, bouncetime=200)
 	GPIO.add_event_detect(btn_right, GPIO.RISING, callback=on_pushright, bouncetime=200)
 	GPIO.add_event_detect(btn_left, GPIO.RISING, callback=on_pushleft, bouncetime=200)
-
+	GPIO.add_event_detect(btn_rst, GPIO.RISING, callback=on_pushrst, bouncetime=200)
 
 def on_pushup(channel):
 	global screen_id
@@ -124,6 +129,9 @@ def on_pushleft(channel):
 	print(brightness)
 	matrix.brightness = brightness
 
+def on_pushrst(channel):
+	print("Shutting down")
+	os.system("shutdown now -h")
 
 def sakura_clock(matrix, currentTime):
 	font = ImageFont.truetype(font='fonts/tiny.otf', size=10)
