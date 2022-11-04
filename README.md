@@ -52,6 +52,14 @@ Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbma
 sudo python main.py --led-no-hardware-pulse
 ```
 
+# Cron job on startup
+```shell
+sudo chmod 777 log.txt
+
+sudo crontab -e
+@reboot /usr/bin/python /home/pi/RPI-led-matrix-clock-py/main.py >> /home/pi/log.txt
+```
+
 # Source
 - sakura.png https://github.com/allenslab/matrix-dashboard/blob/master/impl/apps_v2/res/main_screen/sakura-bg.png
 - tiny.otf https://github.com/allenslab/matrix-dashboard/blob/master/impl/fonts/tiny.otf

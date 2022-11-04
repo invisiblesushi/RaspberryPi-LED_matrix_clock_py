@@ -16,10 +16,10 @@ matrix = None
 weather = None
 last_weather_time = datetime.min
 
-image = Image.open("res/black.png").convert("RGB")
+image = Image.open("/home/pi/RPI-led-matrix-clock-py/res/black.png").convert("RGB")
 image.thumbnail((64, 32), Image.Resampling.LANCZOS)
 config = ConfigParser()
-config.read('appsettings.ini')
+config.read('/home/pi/RPI-led-matrix-clock-py/appsettings.ini')
 
 #GPIO pin config
 screen_id = 0
@@ -134,24 +134,24 @@ def on_pushrst(channel):
 	os.system("shutdown now -h")
 
 def sakura_clock(matrix, currentTime):
-	font = ImageFont.truetype(font='fonts/tiny.otf', size=10)
-	image = Image.open("res/sakura.png").convert("RGB")
+	font = ImageFont.truetype(font='/home/pi/RPI-led-matrix-clock-py/fonts/tiny.otf', size=10)
+	image = Image.open("/home/pi/RPI-led-matrix-clock-py/res/sakura.png").convert("RGB")
 	frame = image.copy()
 	draw = ImageDraw.Draw(frame)
 	draw.text((1, 1), currentTime.strftime("%H:%M"), textColor, font)
 	return frame
 
 def fuji_clock(matrix, currentTime):
-	font = ImageFont.truetype(font='fonts/tiny.otf', size=10)
-	image = Image.open("res/fuji.png").convert("RGB")
+	font = ImageFont.truetype(font='/home/pi/RPI-led-matrix-clock-py/fonts/tiny.otf', size=10)
+	image = Image.open("/home/pi/RPI-led-matrix-clock-py/res/fuji.png").convert("RGB")
 	frame = image.copy()
 	draw = ImageDraw.Draw(frame)
 	draw.text((13, 1), currentTime.strftime("%H:%M"), textColor, font)
 	return frame
 
 def clock(matrix, currentTime):
-	font = ImageFont.truetype(font='fonts/tiny.otf', size=15)
-	image = Image.open("res/black.png").convert("RGB")
+	font = ImageFont.truetype(font='/home/pi/RPI-led-matrix-clock-py/fonts/tiny.otf', size=15)
+	image = Image.open("/home/pi/RPI-led-matrix-clock-py/res/black.png").convert("RGB")
 	frame = image.copy()
 	draw = ImageDraw.Draw(frame)
 	draw.text((4, 8.5), currentTime.strftime("%H:%M"), textColor, font)
@@ -159,8 +159,8 @@ def clock(matrix, currentTime):
 
 def weather_clock(matrix, currentTime):
 	global weather
-	font = ImageFont.truetype(font='fonts/tiny.otf', size=10)
-	font_small = ImageFont.truetype(font='fonts/tiny.otf', size=5)
+	font = ImageFont.truetype(font='/home/pi/RPI-led-matrix-clock-py/fonts/tiny.otf', size=10)
+	font_small = ImageFont.truetype(font='/home/pi/RPI-led-matrix-clock-py/fonts/tiny.otf', size=5)
 	weather = get_weather()
 
 	weather_icon = get_weather_icon(weather.weather_icon_name)
@@ -235,21 +235,21 @@ def get_weekday_short():
 
 def get_weather_icon(icon_name):
 	if icon_name == '01d' or icon_name == '01n':
-		return "res/01d.png"
+		return "/home/pi/RPI-led-matrix-clock-py/res/01d.png"
 	elif icon_name == '02d' or icon_name == '02n':
-		return "res/02d.png"
+		return "/home/pi/RPI-led-matrix-clock-py/res/02d.png"
 	elif icon_name == '03d' or icon_name == '03n':
-		return "res/03d.png"
+		return "/home/pi/RPI-led-matrix-clock-py/res/03d.png"
 	elif icon_name == '04d' or icon_name == '04n':
-		return "res/04d.png"
+		return "/home/pi/RPI-led-matrix-clock-py/res/04d.png"
 	elif icon_name == '09d' or icon_name == '09n':
-		return "res/09d.png"
+		return "/home/pi/RPI-led-matrix-clock-py/res/09d.png"
 	elif icon_name == '10d' or icon_name == '10n':
-		return "res/10d.png"
+		return "/home/pi/RPI-led-matrix-clock-py/res/10d.png"
 	elif icon_name == '13d' or icon_name == '13n':
-		return "res/13d.png"
+		return "/home/pi/RPI-led-matrix-clock-py/res/13d.png"
 	elif icon_name == '50d' or icon_name == '50n':
-		return "res/50d.png"
+		return "/home/pi/RPI-led-matrix-clock-py/res/50d.png"
 
 
 # Main function
