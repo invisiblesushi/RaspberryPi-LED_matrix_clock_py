@@ -1,4 +1,4 @@
-# RPI-led-matrix-clock-py
+# RaspberryPi-LED_matrix_clock_py
 <img src="/Image/Sakura_clock.png" width="500" />
 <img src="/Image/Weather.png" width="500" />
 <img src="/Image/Back.png" width="500" />
