@@ -32,6 +32,7 @@ btn_rst = 31
 brightness = 100
 
 def main():
+	print('Starting : ' + str(datetime.now()))
 	global matrix
 	global weather
 	weather = get_weather()
@@ -207,12 +208,16 @@ def get_weather():
 
 	# get weather every 10m
 	if last_weather_diff_min > 10:
-		owm = OWM(config.get('Open_weather_map', 'owm_api_key'))
-		location = config.get('Open_weather_map', 'location')
-		mgr = owm.weather_manager()
-		weather = mgr.weather_at_place(location).weather
-		last_weather_time = datetime.now();
-		print('Weather = ' + str(weather))
+		try:
+			owm = OWM(config.get('Open_weather_map', 'owm_api_key'))
+			location = config.get('Open_weather_map', 'location')
+			mgr = owm.weather_manager()
+			weather = mgr.weather_at_place(location).weather
+			last_weather_time = datetime.now()
+			print('Weather = ' + str(weather))
+
+		except:
+			print("Could not get weather")
 
 	return weather
 
