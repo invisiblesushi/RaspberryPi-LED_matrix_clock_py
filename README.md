@@ -49,15 +49,16 @@ Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbma
 
 # Run
 ```shell
+// Disclamer it has to run as sudo, cause it's reqired by the libary used
 sudo python main.py --led-no-hardware-pulse
 ```
 
-# Cron job on startup
+# Autostart on startup
 ```shell
-sudo chmod 777 log.txt
+sudo nano .bashrc
 
-sudo crontab -e
-@reboot /usr/bin/python /home/pi/RPI-led-matrix-clock-py/main.py >> /home/pi/log.txt
+Add line:
+sudo /usr/bin/python /home/pi/RPI-led-matrix-clock-py/main.py >> /home/pi/log.txt
 ```
 
 # Source
