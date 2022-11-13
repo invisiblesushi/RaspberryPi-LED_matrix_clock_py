@@ -16,7 +16,8 @@ Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbma
 # Requirement
 - PIL
 - pyowm
-- 
+- https://github.com/hzeller/rpi-rgb-led-matrix libary
+
 # Part list
 - Raspberry pi zero W
 - HCW-P715 Buck Converter
