@@ -30,7 +30,7 @@ Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbma
 | btn_com + [resistor] |   1 |   2 | -
 |                    - |   3 |   4 | -
 |                    - |   5 |   6 | **GND**
-|           **strobe** |   7 |   8 |  btn_down [screen - 1]
+|     **strobe/latch** |   7 |   8 |  btn_down [screen - 1]
 |                    - |   9 |  10 |  btn_up   [screen + 1]
 |            **clock** |  11 |  12 | **OE-**  
 |               **G1** |  13 |  14 | -
@@ -42,8 +42,8 @@ Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbma
 |                    - |  25 |  26 | **B1**
 |                    - |  27 |  28 | -
 |                    - |  29 |  30 | -
-|                    - |  31 |  32 | btn_right  [brightness - 1]
-|   btn_rst [Shutdown] |  33 |  34 | btn_left   [brightness + 1]
+|   btn_rst [Shutdown] |  31 |  32 | btn_right  [brightness - 1]
+|   btn_left   [brightness + 1] |  33 |  34 | 
 |                    - |  35 |  36 | -
 |                    - |  37 |  38 | -
 |                    - |  39 |  40 | -
