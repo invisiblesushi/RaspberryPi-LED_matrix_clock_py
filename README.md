@@ -70,4 +70,4 @@ sudo /usr/bin/python /home/pi/RPI-led-matrix-clock-py/main.py >> /home/pi/log.tx
 <img src="/Image/PCB.png" width="300" />
 
 # Schematics
-<img src="/Image/Schematic_Led%20Matrix%20RPI_2022-11-17%20(1).png" width="600" />
+<img src="/Image/Schematic_Led%20Matrix%20RPI.png" width="600" />
