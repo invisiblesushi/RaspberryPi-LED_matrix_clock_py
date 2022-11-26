@@ -223,38 +223,30 @@ def get_weather():
 
 def get_weekday_short():
 	weekday = datetime.now().weekday()
-	if weekday == 1:
-		return 'MON'
-	if weekday == 2:
-		return 'TUE'
-	if weekday == 3:
-		return 'WED'
-	if weekday == 4:
-		return 'THU'
-	if weekday == 5:
-		return 'FRI'
-	if weekday == 6:
-		return 'SAT'
-	if weekday == 7:
-		return 'SUN'
+	weekdays = {1: 'MON', 2: 'TUE', 3: 'WED', 4: 'THU', 5: 'FRI', 6: 'SAT', 7: 'SAT'}
+	return weekdays.get(weekday)
+
 
 def get_weather_icon(icon_name):
-	if icon_name == '01d' or icon_name == '01n':
-		return "/home/pi/RPI-led-matrix-clock-py/res/01d.png"
-	elif icon_name == '02d' or icon_name == '02n':
-		return "/home/pi/RPI-led-matrix-clock-py/res/02d.png"
-	elif icon_name == '03d' or icon_name == '03n':
-		return "/home/pi/RPI-led-matrix-clock-py/res/03d.png"
-	elif icon_name == '04d' or icon_name == '04n':
-		return "/home/pi/RPI-led-matrix-clock-py/res/04d.png"
-	elif icon_name == '09d' or icon_name == '09n':
-		return "/home/pi/RPI-led-matrix-clock-py/res/09d.png"
-	elif icon_name == '10d' or icon_name == '10n':
-		return "/home/pi/RPI-led-matrix-clock-py/res/10d.png"
-	elif icon_name == '13d' or icon_name == '13n':
-		return "/home/pi/RPI-led-matrix-clock-py/res/13d.png"
-	elif icon_name == '50d' or icon_name == '50n':
-		return "/home/pi/RPI-led-matrix-clock-py/res/50d.png"
+	icons = {
+		'01d': "/home/pi/RPI-led-matrix-clock-py/res/01d.png",
+		'01n': "/home/pi/RPI-led-matrix-clock-py/res/01d.png",
+		'02d': "/home/pi/RPI-led-matrix-clock-py/res/02d.png",
+		'02d': "/home/pi/RPI-led-matrix-clock-py/res/02d.png",
+		'03d': "/home/pi/RPI-led-matrix-clock-py/res/03d.png",
+		'03n': "/home/pi/RPI-led-matrix-clock-py/res/03d.png",
+		'04d': "/home/pi/RPI-led-matrix-clock-py/res/04d.png",
+		'04n': "/home/pi/RPI-led-matrix-clock-py/res/04d.png",
+		'09d': "/home/pi/RPI-led-matrix-clock-py/res/09d.png",
+		'09n': "/home/pi/RPI-led-matrix-clock-py/res/09d.png",
+		'10d': "/home/pi/RPI-led-matrix-clock-py/res/10d.png",
+		'10n': "/home/pi/RPI-led-matrix-clock-py/res/10d.png",
+		'13d': "/home/pi/RPI-led-matrix-clock-py/res/13d.png",
+		'13n': "/home/pi/RPI-led-matrix-clock-py/res/13d.png",
+		'50d': "/home/pi/RPI-led-matrix-clock-py/res/50d.png",
+		'50n': "/home/pi/RPI-led-matrix-clock-py/res/50d.png"
+	}
+	return icons.get(icon_name)
 
 
 # Main function
