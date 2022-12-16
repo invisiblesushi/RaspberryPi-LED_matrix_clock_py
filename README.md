@@ -68,6 +68,7 @@ sudo /usr/bin/python /home/pi/RPI-led-matrix-clock-py/main.py >> /home/pi/log.tx
 
 # Custom raspberry pi hat
 <img src="/Image/PCB.png" width="300" />
+<img src="/Image/PCB2.png" width="300" />
 
 # Schematics
 <img src="/Image/Schematic_Led%20Matrix%20RPI.png" width="600" />
