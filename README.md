@@ -1,7 +1,7 @@
 # RaspberryPi-LED_matrix_clock_py
-<img src="/Image/Sakura_clock.png" width="500" />
-<img src="/Image/Weather.png" width="500" />
-<img src="/Image/Back.png" width="500" />
+<img src="/Image/Sakura_clock.png" width="600" />
+<img src="/Image/Weather.png" width="600" />
+<img src="/Image/Back2.jpg" width="600" />
 
 # Setup Python 3
 ```shell
@@ -68,7 +68,7 @@ sudo /usr/bin/python /home/pi/RPI-led-matrix-clock-py/main.py >> /home/pi/log.tx
 
 # Custom raspberry pi hat
 <img src="/Image/PCB.png" width="300" />
-<img src="/Image/PCB2.png" width="300" />
+<img src="/Image/PCB3.jpg" width="300" />
 
 # Schematics
 <img src="/Image/Schematic_Led%20Matrix%20RPI.png" width="600" />
