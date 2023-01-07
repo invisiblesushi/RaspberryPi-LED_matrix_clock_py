@@ -72,3 +72,5 @@ sudo /usr/bin/python /home/pi/RPI-led-matrix-clock-py/main.py >> /home/pi/log.tx
 
 # Schematics
 <img src="/Image/Schematic_Led%20Matrix%20RPI.png" width="600" />
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Finvisiblesushi%2FRaspberryPi-LED_matrix_clock_py&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
