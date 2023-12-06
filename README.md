@@ -1,16 +1,21 @@
-# RaspberryPi-LED_matrix_clock_py
-<img src="/Image/Sakura_clock.png" width="600" />
-<img src="/Image/Weather.png" width="600" />
-<img src="/Image/Back2.jpg" width="600" />
+# RaspberryPi-LED_matrix_clock_py 🕰️🌸
 
-# Setup Python 3
-```shell
+A Raspberry Pi-based LED matrix clock with additional features.
+
+![Sakura Clock](/Image/Sakura_clock.png)
+![Weather Display](/Image/Weather.png)
+![Back Image](/Image/Back2.jpg)
+
+## Setup Python 3
+
+```bash
 git clone https://github.com/hzeller/rpi-rgb-led-matrix.git
 cd /bindings/python/
 sudo make build-python PYTHON=$(which python3)
 sudo make install-python PYTHON=$(which python3)
 
-Make sure rgbmatrix folder exist in /usr/local/lib/python3.9/dist-packages/rgbmatrix
+# Make sure rgbmatrix folder exists in /usr/local/lib/python3.9/dist-packages/rgbmatrix
+
 ```
 
 # Requirement
